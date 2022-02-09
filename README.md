@@ -95,6 +95,7 @@ Folder's description:
 |test\resources\web.features\\\*.feature|Folder with all the **feature files** containing **Test Scenarios** and **Sample Data** |
 |main\resources|Folder with all configuration needed to run Lippia |
 
+The **steps** are defined to execute the *Test Scenarios* defined in Gherkin language.
 
 ## Runners
 ***
