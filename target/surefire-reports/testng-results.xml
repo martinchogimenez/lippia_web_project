@@ -1,0 +1,88 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testng-results ignored="0" total="3" passed="2" failed="1" skipped="0">
+  <reporter-output>
+  </reporter-output>
+  <suite started-at="2022-02-09T15:52:02Z" name="BDD Test Suite" finished-at="2022-02-09T15:53:15Z" duration-ms="73973">
+    <groups>
+      <group name="cucumber">
+        <method signature="AbstractTestNGCucumberTests.runScenario(cucumber.api.testng.PickleEventWrapper, cucumber.api.testng.CucumberFeatureWrapper)[pri:0, instance:com.crowdar.bdd.cukes.TestNGSecuencialRunner@47542153]" name="runScenario" class="cucumber.api.testng.AbstractTestNGCucumberTests"/>
+      </group> <!-- cucumber -->
+    </groups>
+    <test started-at="2022-02-09T15:52:02Z" name="TestNg Secuencial runner Tests" finished-at="2022-02-09T15:53:15Z" duration-ms="73973">
+      <class name="com.crowdar.bdd.cukes.TestNGSecuencialRunner">
+        <test-method is-config="true" signature="setUpClass()[pri:0, instance:com.crowdar.bdd.cukes.TestNGSecuencialRunner@47542153]" started-at="2022-02-09T15:52:02Z" name="setUpClass" finished-at="2022-02-09T15:52:02Z" duration-ms="839" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setUpClass -->
+        <test-method signature="runScenario(cucumber.api.testng.PickleEventWrapper, cucumber.api.testng.CucumberFeatureWrapper)[pri:0, instance:com.crowdar.bdd.cukes.TestNGSecuencialRunner@47542153]" started-at="2022-02-09T15:52:02Z" name="runScenario" description="Runs Cucumber Scenarios" data-provider="scenarios" finished-at="2022-02-09T15:52:39Z" duration-ms="36812" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA["The client search hat"]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA["As a potential client i need to search in automationpractice to find a product and sign in verifying the results"]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- runScenario -->
+        <test-method signature="runScenario(cucumber.api.testng.PickleEventWrapper, cucumber.api.testng.CucumberFeatureWrapper)[pri:0, instance:com.crowdar.bdd.cukes.TestNGSecuencialRunner@47542153]" started-at="2022-02-09T15:52:39Z" name="runScenario" description="Runs Cucumber Scenarios" data-provider="scenarios" finished-at="2022-02-09T15:52:58Z" duration-ms="18229" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA["The client logs in"]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA["As a potential client i need to search in automationpractice to find a product and sign in verifying the results"]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- runScenario -->
+        <test-method signature="runScenario(cucumber.api.testng.PickleEventWrapper, cucumber.api.testng.CucumberFeatureWrapper)[pri:0, instance:com.crowdar.bdd.cukes.TestNGSecuencialRunner@47542153]" started-at="2022-02-09T15:52:58Z" name="runScenario" description="Runs Cucumber Scenarios" data-provider="scenarios" finished-at="2022-02-09T15:53:14Z" duration-ms="16713" status="FAIL">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA["The client search a product in automationpractice page and sort the result"]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA["As a potential client i need to search in automationpractice to find a product and sign in verifying the results"]]>
+              </value>
+            </param>
+          </params>
+          <exception class="java.lang.AssertionError">
+            <message>
+              <![CDATA[expected [true] but found [false]]]>
+            </message>
+            <full-stacktrace>
+              <![CDATA[java.lang.AssertionError: expected [true] but found [false]
+at org.testng.Assert.fail(Assert.java:96)
+at org.testng.Assert.failNotEquals(Assert.java:776)
+at org.testng.Assert.assertTrue(Assert.java:44)
+at org.testng.Assert.assertTrue(Assert.java:54)
+at lippia.web.services.AutomationHomeService.verifyResults(AutomationHomeService.java:65)
+at lippia.web.steps.AutomationWebSteps.theClientVerifyThatResultsAreShownProperly(AutomationWebSteps.java:63)
+at ✽.The client verify that results are shown properly.(file:src/test/resources/web/features/AutomationPractice.feature:23)
+]]>
+            </full-stacktrace>
+          </exception> <!-- java.lang.AssertionError -->
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- runScenario -->
+        <test-method is-config="true" signature="tearDownClass()[pri:0, instance:com.crowdar.bdd.cukes.TestNGSecuencialRunner@47542153]" started-at="2022-02-09T15:53:14Z" name="tearDownClass" finished-at="2022-02-09T15:53:15Z" duration-ms="1215" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- tearDownClass -->
+      </class> <!-- com.crowdar.bdd.cukes.TestNGSecuencialRunner -->
+    </test> <!-- TestNg Secuencial runner Tests -->
+  </suite> <!-- BDD Test Suite -->
+</testng-results>
