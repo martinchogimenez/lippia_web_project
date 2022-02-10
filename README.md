@@ -19,12 +19,12 @@ This project includes the required components and configuration files to simply 
 
     + Download and unzip the source repository for this guide, or clone it using Git:   
     ```
-    $ git clone https://github.com/martinchogimenez/lippia_web_project.git
+    $ git clone https://github.com/martinchogimenez/testing_automation_with_lippia_framework_WEB.git
     ```
 
     + Go to root directory:   
     ```
-    $ cd lippia_web_project
+    $ cd testing_automation_with_lippia_framework_WEB
     ```   
 
   + ### Second Step
