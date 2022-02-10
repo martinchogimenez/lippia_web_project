@@ -1,8 +1,8 @@
 # Lippia Web project
 
 # Purpose
-This project has the intention of showing a way practically how to use Lippia Automation Framework to build automated tests by using Gherkin and Page-Object Model pattern.
-This project includes the required components and configuration files to simply download and run a set of tests in your local computer.
+This project has the intention of showing you a web automation testing suite case, using Lippia Automation Framework by using Gherkin and Page-Object Model pattern.
+This project includes the required components and configuration files to simply download and run the set of tests in your local computer.
 
 ## System Requirements: 
 + jdk: https://docs.oracle.com/en/java/javase/index.html 
