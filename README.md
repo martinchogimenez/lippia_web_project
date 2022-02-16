@@ -74,7 +74,7 @@ This project includes the required components and configuration files to simply 
 ### Reports are generated in the folder called **target**, which will be generated once the execution of the test suite is finished.   
 
 ```
-├── lippia-web-sample-project
+├── testing_automation_with_lippia_framework_WEB
 |   ├── docs
 |   |   └── ...
 |   ├── src
@@ -100,7 +100,7 @@ The **steps** are defined to execute the *Test Scenarios* defined in Gherkin lan
 ## Runners
 ***
 ```
-├── lippia-web-sample-project
+├── testing_automation_with_lippia_framework_WEB
 │   ├── docs
 │   │   └── ...
 │   ├── src
