@@ -72,7 +72,7 @@ This project includes the required components and configuration files to simply 
 
 
 ### Reports are generated in the folder called **target**, which will be generated once the execution of the test suite is finished.   
-Note that the following structure is part of the report generated with ExtentReport library.
+
 ```
 ├── lippia-web-sample-project
 |   ├── docs
