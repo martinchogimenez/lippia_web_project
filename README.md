@@ -1,8 +1,8 @@
 # Lippia Web project
 
 # Purpose
-This project has the intention of showing a way practically how to use Lippia Automation Framework to build automated tests by using Gherkin and Page-Object Model pattern.
-This project includes the required components and configuration files to simply download and run a set of tests in your local computer.
+This project has the intention of showing you a web automation testing suite case, using Lippia Automation Framework by using Gherkin and Page-Object Model pattern.
+This project includes the required components and configuration files to simply download and run the set of tests in your local computer.
 
 ## System Requirements: 
 + jdk: https://docs.oracle.com/en/java/javase/index.html 
@@ -19,12 +19,12 @@ This project includes the required components and configuration files to simply 
 
     + Download and unzip the source repository for this guide, or clone it using Git:   
     ```
-    $ git clone https://github.com/martinchogimenez/lippia_web_project.git
+    $ git clone https://github.com/martinchogimenez/testing_automation_with_lippia_framework_WEB.git
     ```
 
     + Go to root directory:   
     ```
-    $ cd lippia_web_project
+    $ cd testing_automation_with_lippia_framework_WEB
     ```   
 
   + ### Second Step
@@ -72,9 +72,9 @@ This project includes the required components and configuration files to simply 
 
 
 ### Reports are generated in the folder called **target**, which will be generated once the execution of the test suite is finished.   
-Note that the following structure is part of the report generated with ExtentReport library.
+
 ```
-├── lippia-web-sample-project
+├── testing_automation_with_lippia_framework_WEB
 |   ├── docs
 |   |   └── ...
 |   ├── src
@@ -100,7 +100,7 @@ The **steps** are defined to execute the *Test Scenarios* defined in Gherkin lan
 ## Runners
 ***
 ```
-├── lippia-web-sample-project
+├── testing_automation_with_lippia_framework_WEB
 │   ├── docs
 │   │   └── ...
 │   ├── src
