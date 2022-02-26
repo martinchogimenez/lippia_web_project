@@ -10,7 +10,7 @@ import java.util.List;
 
 import static com.crowdar.core.actions.WebActionManager.navigateTo;
 
-public class AutomationHomeService extends ActionManager {
+public class AutomationService extends ActionManager {
 
     public static void navegarWeb(){
         navigateTo(PropertyManager.getProperty("web.base.url"));
@@ -42,8 +42,6 @@ public class AutomationHomeService extends ActionManager {
         click(AutomationConstants.BUTTON_SIGNINB_XPATH);
     }
     public static void verifyResults(){
-
-
         int tamanioLista;
         boolean c;
         double menor=0;
@@ -64,4 +62,29 @@ public class AutomationHomeService extends ActionManager {
         }
         Assert.assertTrue(c);
     }
+    private static WebElement stats() {
+        return getElement(AutomationConstants.STATS_ID);
+    }
+
+    public static String getStats() {
+        return stats().getText();
+    }
+
+
+    public static void verifyTheResults(){
+        Assert.assertFalse(getStats().isEmpty());
+    }
+
+    public static void verifySignInPage() {
+
+        waitVisibility(AutomationConstants.INPUT_ADDRESS_XPATH);
+        Assert.assertTrue(isVisible(AutomationConstants.INPUT_ADDRESS_XPATH));
+        waitVisibility(AutomationConstants.H1_TITULO_XPATH);
+        Assert.assertEquals(getText(AutomationConstants.H1_TITULO_XPATH),"AUTHENTICATION","No se encuentra el titulo");}
+    public static void verifyMyAccountPage(){
+        waitVisibility(AutomationConstants.VERIFICATION_ACCOUNT);
+        Assert.assertTrue(isVisible(AutomationConstants.VERIFICATION_ACCOUNT));
+        waitVisibility(AutomationConstants.H1_TITULO_XPATHH);
+        Assert.assertEquals(getText(AutomationConstants.H1_TITULO_XPATHH),"MY ACCOUNT","No se encuentra el titulo");}
+
 }
