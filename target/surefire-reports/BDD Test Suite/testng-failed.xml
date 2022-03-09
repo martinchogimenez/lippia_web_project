@@ -6,7 +6,7 @@
       <class name="com.crowdar.bdd.cukes.TestNGSecuencialRunner">
         <methods>
           <include name="setUpClass"/>
-          <include name="runScenario" invocation-numbers="0 2"/>
+          <include name="runScenario" invocation-numbers="2"/>
           <include name="tearDownClass"/>
         </methods>
       </class> <!-- com.crowdar.bdd.cukes.TestNGSecuencialRunner -->

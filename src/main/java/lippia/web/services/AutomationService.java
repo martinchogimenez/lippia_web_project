@@ -12,17 +12,19 @@ import static com.crowdar.core.actions.WebActionManager.navigateTo;
 
 public class AutomationService extends ActionManager {
 
-    public static void navegarWeb(){
+    public static void webNavigation() {
         navigateTo(PropertyManager.getProperty("web.base.url"));
     }
 
     public static void enterSearchCriteria(String text) {
         setInput(AutomationConstants.INPUT_SEARCH_XPATH, text);
     }
+
     public static void enterSearchCriteriaa(String text) {
         setInput(AutomationConstants.INPUT_ADDRESS_XPATH, text);
     }
-    public static void setSelect(){
+
+    public static void setSelect() {
         click(AutomationConstants.SELECT);
     }
 
@@ -34,34 +36,35 @@ public class AutomationService extends ActionManager {
         click(AutomationConstants.SEARCH_BUTTON_NAME);
     }
 
-
     public static void clickButton() {
         click(AutomationConstants.BUTTON_SIGNIN_XPATH);
     }
+
     public static void clickbButton() {
         click(AutomationConstants.BUTTON_SIGNINB_XPATH);
     }
-    public static void verifyResults(){
+
+    public static void verifyResults() {
         int tamanioLista;
-        boolean c;
-        double menor=0;
-        c=true;
+        boolean flag;
+        double menor = 0;
+        flag = true;
         List<WebElement> listaPrecio = getElements(AutomationConstants.PRICE);
-        tamanioLista=listaPrecio.size();
-        for(int i=0; i<tamanioLista; i++) {
+        tamanioLista = listaPrecio.size();
+        for (int i = 0; i < tamanioLista; i++) {
             String lista = listaPrecio.get(i).getText();
             double price = Double.parseDouble(lista.replace("$", ""));
-            if (i==0) {
+            if (i == 0) {
                 menor = price;
-            }
-            else {
-                if (price<menor){
-                    c=false;
+            } else {
+                if (price < menor) {
+                    flag = false;
                 }
             }
         }
         Assert.assertTrue(c);
     }
+
     private static WebElement stats() {
         return getElement(AutomationConstants.STATS_ID);
     }
@@ -71,20 +74,21 @@ public class AutomationService extends ActionManager {
     }
 
 
-    public static void verifyTheResults(){
+    public static void verifyTheResults() {
         Assert.assertFalse(getStats().isEmpty());
     }
 
     public static void verifySignInPage() {
-
         waitVisibility(AutomationConstants.INPUT_ADDRESS_XPATH);
         Assert.assertTrue(isVisible(AutomationConstants.INPUT_ADDRESS_XPATH));
         waitVisibility(AutomationConstants.H1_TITULO_XPATH);
-        Assert.assertEquals(getText(AutomationConstants.H1_TITULO_XPATH),"AUTHENTICATION","No se encuentra el titulo");}
-    public static void verifyMyAccountPage(){
+        Assert.assertEquals(getText(AutomationConstants.H1_TITULO_XPATH), "AUTHENTICATION", "Title has not been found");
+    }
+
+    public static void verifyMyAccountPage() {
         waitVisibility(AutomationConstants.VERIFICATION_ACCOUNT);
         Assert.assertTrue(isVisible(AutomationConstants.VERIFICATION_ACCOUNT));
         waitVisibility(AutomationConstants.H1_TITULO_XPATHH);
-        Assert.assertEquals(getText(AutomationConstants.H1_TITULO_XPATHH),"MY ACCOUNT","No se encuentra el titulo");}
-
+        Assert.assertEquals(getText(AutomationConstants.H1_TITULO_XPATHH), "MY ACCOUNT", "Title has not been found");
+    }
 }

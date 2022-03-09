@@ -24,7 +24,7 @@
     <div class="top-banner-root">
       <span class="top-banner-title-font">Test results</span>
       <br/>
-      <span class="top-banner-font-1">1 suite</span>
+      <span class="top-banner-font-1">1 suite, 1 failed test</span>
     </div> <!-- top-banner-root -->
     <div class="navigator-root">
       <div class="navigator-suite-header">
@@ -38,7 +38,7 @@
         <div class="rounded-window">
           <div class="suite-header light-rounded-window-top">
             <a href="#" panel-name="suite-BDD_Test_Suite" class="navigator-link">
-              <span class="suite-name border-passed">BDD Test Suite</span>
+              <span class="suite-name border-failed">BDD Test Suite</span>
             </a> <!-- navigator-link -->
           </div> <!-- suite-header light-rounded-window-top -->
           <div class="navigator-suite-content">
@@ -91,7 +91,21 @@
               <div class="suite-section-content">
                 <ul>
                   <li>
-                    <span class="method-stats">3 methods,   3 passed</span>
+                    <span class="method-stats">3 methods, 1 failed,   2 passed</span>
+                  </li>
+                  <li>
+                    <span class="method-list-title failed">Failed methods</span>
+                    <span class="show-or-hide-methods failed">
+                      <a href="#" panel-name="suite-BDD_Test_Suite" class="hide-methods failed suite-BDD_Test_Suite"> (hide)</a> <!-- hide-methods failed suite-BDD_Test_Suite -->
+                      <a href="#" panel-name="suite-BDD_Test_Suite" class="show-methods failed suite-BDD_Test_Suite"> (show)</a> <!-- show-methods failed suite-BDD_Test_Suite -->
+                    </span>
+                    <div class="method-list-content failed suite-BDD_Test_Suite">
+                      <span>
+                        <img src="failed.png" width="3%"/>
+                        <a href="#" panel-name="suite-BDD_Test_Suite" title="com.crowdar.bdd.cukes.TestNGSecuencialRunner" class="method navigator-link" hash-for-method="runScenario(&quot;The client search a product in automationpractice page and sort the result&quot;, &quot;As a potential client...)">runScenario("The client search a product in automationpractice page and sort the result", "As a potential client...)</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                    </div> <!-- method-list-content failed suite-BDD_Test_Suite -->
                   </li>
                   <li>
                     <span class="method-list-title passed">Passed methods</span>
@@ -110,11 +124,6 @@
                         <a href="#" panel-name="suite-BDD_Test_Suite" title="com.crowdar.bdd.cukes.TestNGSecuencialRunner" class="method navigator-link" hash-for-method="runScenario(&quot;The client logs in&quot;, &quot;As a potential client i need to search in automationpractice to find a produc...)">runScenario("The client logs in", "As a potential client i need to search in automationpractice to find a produc...)</a> <!-- method navigator-link -->
                       </span>
                       <br/>
-                      <span>
-                        <img src="passed.png" width="3%"/>
-                        <a href="#" panel-name="suite-BDD_Test_Suite" title="com.crowdar.bdd.cukes.TestNGSecuencialRunner" class="method navigator-link" hash-for-method="runScenario(&quot;The client search a product in automationpractice page and sort the result&quot;, &quot;As a potential client...)">runScenario("The client search a product in automationpractice page and sort the result", "As a potential client...)</a> <!-- method navigator-link -->
-                      </span>
-                      <br/>
                     </div> <!-- method-list-content passed suite-BDD_Test_Suite -->
                   </li>
                 </ul>
@@ -127,6 +136,30 @@
     <div class="wrapper">
       <div class="main-panel-root">
         <div panel-name="suite-BDD_Test_Suite" class="panel BDD_Test_Suite">
+          <div class="suite-BDD_Test_Suite-class-failed">
+            <div class="main-panel-header rounded-window-top">
+              <img src="failed.png"/>
+              <span class="class-name">com.crowdar.bdd.cukes.TestNGSecuencialRunner</span>
+            </div> <!-- main-panel-header rounded-window-top -->
+            <div class="main-panel-content rounded-window-bottom">
+              <div class="method">
+                <div class="method-content">
+                  <a name="runScenario(&quot;The client search a product in automationpractice page and sort the result&quot;, &quot;As a potential client...)">
+                  </a> <!-- runScenario("The client search a product in automationpractice page and sort the result", "As a potential client...) -->
+                  <span class="method-name">runScenario</span>
+                  <span class="parameters">("The client search a product in automationpractice page and sort the result", "As a potential client i need to search in automationpractice to find a product and sign in verifying the results")</span>
+                  <div class="stack-trace">java.lang.AssertionError: expected [true] but found [false]
+	at lippia.web.services.AutomationService.verifyResults(AutomationService.java:69)
+	at lippia.web.steps.AutomationWebSteps.theClientVerifyThatResultsAreShownProperly(AutomationWebSteps.java:61)
+	at ✽.The client verify that results are shown properly.(file:src/test/resources/web/features/AutomationPractice.feature:23)
+... Removed 4 stack frames
+</div> <!-- stack-trace -->
+                  <em>
+(Runs Cucumber Scenarios)                  </em>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+            </div> <!-- main-panel-content rounded-window-bottom -->
+          </div> <!-- suite-BDD_Test_Suite-class-failed -->
           <div class="suite-BDD_Test_Suite-class-passed">
             <div class="main-panel-header rounded-window-top">
               <img src="passed.png"/>
@@ -149,16 +182,6 @@
                   </a> <!-- runScenario("The client logs in", "As a potential client i need to search in automationpractice to find a produc...) -->
                   <span class="method-name">runScenario</span>
                   <span class="parameters">("The client logs in", "As a potential client i need to search in automationpractice to find a product and sign in verifying the results")</span>
-                  <em>
-(Runs Cucumber Scenarios)                  </em>
-                </div> <!-- method-content -->
-              </div> <!-- method -->
-              <div class="method">
-                <div class="method-content">
-                  <a name="runScenario(&quot;The client search a product in automationpractice page and sort the result&quot;, &quot;As a potential client...)">
-                  </a> <!-- runScenario("The client search a product in automationpractice page and sort the result", "As a potential client...) -->
-                  <span class="method-name">runScenario</span>
-                  <span class="parameters">("The client search a product in automationpractice page and sort the result", "As a potential client i need to search in automationpractice to find a product and sign in verifying the results")</span>
                   <em>
 (Runs Cucumber Scenarios)                  </em>
                 </div> <!-- method-content -->
@@ -229,20 +252,20 @@ data.addRows(3);
 data.setCell(0, 0, 0)
 data.setCell(0, 1, 'runScenario')
 data.setCell(0, 2, 'com.crowdar.bdd.cukes.TestNGSecuencialRunner')
-data.setCell(0, 3, 31294);
+data.setCell(0, 3, 309562);
 data.setCell(1, 0, 1)
 data.setCell(1, 1, 'runScenario')
 data.setCell(1, 2, 'com.crowdar.bdd.cukes.TestNGSecuencialRunner')
-data.setCell(1, 3, 25192);
+data.setCell(1, 3, 71970);
 data.setCell(2, 0, 2)
 data.setCell(2, 1, 'runScenario')
 data.setCell(2, 2, 'com.crowdar.bdd.cukes.TestNGSecuencialRunner')
-data.setCell(2, 3, 20102);
+data.setCell(2, 3, 56836);
 window.suiteTableData['BDD_Test_Suite']= { tableData: data, tableDiv: 'times-div-BDD_Test_Suite'}
 return data;
 }
               </script>
-              <span class="suite-total-time">Total running time: 1 minutes</span>
+              <span class="suite-total-time">Total running time: 7 minutes</span>
               <div id="times-div-BDD_Test_Suite">
               </div> <!-- times-div-BDD_Test_Suite -->
             </div> <!-- times-div -->
@@ -275,19 +298,21 @@ return data;
               </div> <!-- configuration-class before -->
               <div class="test-method">
                 <span class="method-name">runScenario("The client search hat", "As a potential client i need to search in automationpractice to find a pro...)</span>
-                <span class="method-start">756 ms</span>
+                <span class="method-start">2699 ms</span>
               </div> <!-- test-method -->
               <div class="test-method">
                 <span class="method-name">runScenario("The client logs in", "As a potential client i need to search in automationpractice to find a produc...)</span>
-                <span class="method-start">32052 ms</span>
+                <span class="method-start">59557 ms</span>
               </div> <!-- test-method -->
               <div class="test-method">
+                <img src="failed.png">
+                </img>
                 <span class="method-name">runScenario("The client search a product in automationpractice page and sort the result", "As a potential client...)</span>
-                <span class="method-start">57245 ms</span>
+                <span class="method-start">369273 ms</span>
               </div> <!-- test-method -->
               <div class="configuration-class after">
                 <span class="method-name">tearDownClass</span>
-                <span class="method-start">77349 ms</span>
+                <span class="method-start">441298 ms</span>
               </div> <!-- configuration-class after -->
           </div> <!-- main-panel-content rounded-window-bottom -->
         </div> <!-- panel -->

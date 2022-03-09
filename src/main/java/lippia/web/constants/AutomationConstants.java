@@ -12,8 +12,6 @@ public class AutomationConstants {
     public static final String BUTTON_SIGNINB_XPATH = "xpath://button[@id='SubmitLogin']";
     public static final String VERIFICATION_ACCOUNT = "xpath://*[@id=\"header\"]/div[2]/div/div/nav/div[1]/a/span";
     public static final String H1_TITULO_XPATHH = "xpath://*[@id=\"center_column\"]/h1";
-    public static final String MAIL = "martinchogimenez@gmail.com";
-    public static final String PASS = "123456";
     public static final String SELECT = "xpath://*[@id='selectProductSort']/option[2]";
     public static final String PRICE = "xpath://div[@class='right-block']/div[@class='content_price']/span[@class='price product-price']";
 
