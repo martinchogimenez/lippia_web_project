@@ -19,7 +19,7 @@ public class AutomationWebSteps extends PageSteps {
     }
 
     @Then("The client verify that results are shown properly")
-    public void statVerfication() {
+    public void statVerfication()
         AutomationService.verifyTheResults();
     }
 
