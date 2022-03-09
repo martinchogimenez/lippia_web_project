@@ -44,25 +44,27 @@ public class AutomationService extends ActionManager {
         click(AutomationConstants.BUTTON_SIGNINB_XPATH);
     }
 
+//In verifyResults we verify the list is sorted by price
+
     public static void verifyResults() {
-        int tamanioLista;
+        int listSize;
         boolean flag;
-        double menor = 0;
+        double smallest = 0;
         flag = true;
-        List<WebElement> listaPrecio = getElements(AutomationConstants.PRICE);
-        tamanioLista = listaPrecio.size();
-        for (int i = 0; i < tamanioLista; i++) {
-            String lista = listaPrecio.get(i).getText();
+        List<WebElement> listPrice = getElements(AutomationConstants.PRICE);
+        listSize = listPrice.size();
+        for (int i = 0; i < listSize; i++) {
+            String lista = listPrice.get(i).getText();
             double price = Double.parseDouble(lista.replace("$", ""));
             if (i == 0) {
-                menor = price;
+                smallest = price;
             } else {
-                if (price < menor) {
+                if (price < smallest) {
                     flag = false;
                 }
             }
         }
-        Assert.assertTrue(c);
+        Assert.assertTrue(flag);
     }
 
     private static WebElement stats() {
@@ -72,7 +74,6 @@ public class AutomationService extends ActionManager {
     public static String getStats() {
         return stats().getText();
     }
-
 
     public static void verifyTheResults() {
         Assert.assertFalse(getStats().isEmpty());
