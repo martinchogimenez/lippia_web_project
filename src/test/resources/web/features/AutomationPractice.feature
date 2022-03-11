@@ -3,7 +3,7 @@ Feature: As a potential client i need to search in automationpractice to find a 
   @Smoke
   Scenario: The client search hat
     Given The client is in automationpractice page
-    When The client search for word hat
+    When The client search for word "hat"
     Then The client verify that results are shown properly
 
   @Smoke
