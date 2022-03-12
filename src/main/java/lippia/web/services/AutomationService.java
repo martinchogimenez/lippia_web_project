@@ -28,7 +28,7 @@ public class AutomationService extends ActionManager {
         click(AutomationConstants.SELECT);
     }
 
-    public static void enterSearchCriteriaaa(String text) {
+    public static void enterPassw(String text) {
         setInput(AutomationConstants.INPUT_PASS_XPATH, text);
     }
 
@@ -36,15 +36,15 @@ public class AutomationService extends ActionManager {
         click(AutomationConstants.SEARCH_BUTTON_NAME);
     }
 
-    public static void clickButton() {
-        click(AutomationConstants.BUTTON_SIGNIN_XPATH);
+    public static void clickConfirmButton() {
+        click(AutomationConstants.BUTTON_SIGNIN_CONFIRM);
     }
 
-    public static void clickbButton() {
-        click(AutomationConstants.BUTTON_SIGNINB_XPATH);
+    public static void clickHomeButton() {
+        click(AutomationConstants.BUTTON_SIGNIN_HOME);
     }
 
-//In verifyResults we verify the list is sorted by price
+//In verifyResults method we verify the list is sorted by price
 
     public static void verifyResults() {
         int listSize;

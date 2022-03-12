@@ -7,8 +7,8 @@ import lippia.web.services.AutomationService;
 
 public class AutomationWebSteps extends PageSteps {
 
-    @Given("The client is in automationpractice page")
-    public void theClientIsInAutomationpracticePage() {
+    @Given("The client is in Home page")
+    public void theClientIsInHomePage() {
         AutomationService.webNavigation();
     }
 
@@ -23,30 +23,14 @@ public class AutomationWebSteps extends PageSteps {
         AutomationService.verifyTheResults();
     }
 
-    @And("The client fill the Email adress input")
-    public void theClientFillTheEmailAdressInput() {
-        AutomationService.verifySignInPage();
-        AutomationService.enterSearchCriteriaa(AutomationData.MAIL);
-    }
-
-    @When("The client click the button \"(.*)\"$")
-    public void theClientClickTheButton() {
-        AutomationService.clickButton();
-    }
-
     @And("The client fill the Password input")
     public void theClientFillThePasswordInput() {
-        AutomationService.enterSearchCriteriaaa(AutomationData.PASS);
+        AutomationService.enterPassw(AutomationData.PASS);
     }
 
     @Then("The client verify that MY ACCOUNT page is shown")
     public void theClientVerifyThatMYACCOUNTPageIsShown() {
         AutomationService.verifyMyAccountPage();
-    }
-
-    @And("The client click the button {string}.")
-    public void theClientClicksTheButton(String arg0) {
-        AutomationService.clickbButton();
     }
 
     @And("The client select Sort by Price: Lowest first")
@@ -57,5 +41,21 @@ public class AutomationWebSteps extends PageSteps {
     @Then("The client verify that results are shown properly.")
     public void theClientVerifyThatResultsAreShownProperly() {
         AutomationService.verifyResults();
+    }
+
+    @And("The client fill the Email address input")
+    public void theClientFillTheEmailAddressInput() {
+        AutomationService.verifySignInPage();
+        AutomationService.enterSearchCriteriaa(AutomationData.MAIL);
+    }
+
+    @When("The client click the button Sign in")
+    public void theClientClickTheButtonSignIn() {
+        AutomationService.clickHomeButton();
+    }
+
+    @And("The client click the button Sign in to confirm the data")
+    public void theClientClickTheButtonSignInToConfirmTheData() {
+        AutomationService.clickConfirmButton();
     }
 }
