@@ -1,2 +1,4 @@
+lippia\web\services\PageSearchResultService.class
+lippia\web\services\PageLoginService.class
 lippia\web\constants\AutomationData.class
-lippia\web\services\AutomationService.class
+lippia\web\services\PageHomeService.class

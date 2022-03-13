@@ -1,7 +1,7 @@
 -------------------------------------------------------------------------------
 Test set: TestSuite
 -------------------------------------------------------------------------------
-Tests run: 3, Failures: 1, Errors: 0, Skipped: 0, Time elapsed: 241.292 s <<< FAILURE! - in TestSuite
-runScenario(com.crowdar.bdd.cukes.TestNGSecuencialRunner)  Time elapsed: 92.926 s  <<< FAILURE!
+Tests run: 3, Failures: 1, Errors: 0, Skipped: 0, Time elapsed: 286.1 s <<< FAILURE! - in TestSuite
+runScenario(com.crowdar.bdd.cukes.TestNGSecuencialRunner)  Time elapsed: 54.675 s  <<< FAILURE!
 java.lang.AssertionError: expected [true] but found [false]
 
